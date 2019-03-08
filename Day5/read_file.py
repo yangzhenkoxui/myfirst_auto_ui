@@ -36,6 +36,11 @@ class readfile():
             data.append(sheet.cell_value(i,0))
         return data
 
+    #读取xml
+
+
+
+
 
 
 

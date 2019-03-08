@@ -1,0 +1,28 @@
+<input id="loginname" type="text" class="itxt" name="loginname"
+tabindex="1" autocomplete="off" value="" placeholder="邮箱/用户名/已验证手机">
+
+<input type="password" id="nloginpwd" name="nloginpwd"
+class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码">
+
+tag name定位
+tag name定位到元素为list，想取到制定的元素要知道元素是第几个，通过页面源码查找第几个
+
+linke text定位
+没有办法定位到input标签元素，linke text定位是定位a标签和文本元素
+
+xpath定位  绝对路径加元素属性定位（属性的值一定要写全部的值）
+driver.find_element_by_xpath("//div[@class='item item-fore1' ]/input").send_keys("绝对路径钾元素class属性")
+
+<div class="item item-fore1">
+     <label for="loginname" class="login-label name-label"></label>
+     <input id="loginname" type="text" class="itxt" name="loginname" tabindex="1" autocomplete="off" value="" placeholder="邮箱/用户名/已验证手机">
+     <span class="clear-btn"></span>
+</div>
+
+xpath逻辑运算符定位
+1.text()函数文本定位：【百度搜索按钮】
+        find_element_by_xpath("//*[text()='百度搜索']")
+2.and逻辑运算：[百度新闻链接]
+        find_element_by_xpath("//a[text()='新闻' and @class='mnav']")
+3.contains模糊定位：【百度新闻链接】
+        find_element_by_xpath("//*[contains(@href,'news.baidu0') and contains(@class,'mnav')]")

@@ -24,9 +24,9 @@ class model():
     #登录
     def login(driver,name,pwd):
         try:
-            ele_loginname = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID,"")))
-            ele_loginpwd = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID, "")))
-            ele_login = WebDriverWait(driver, 10, 1).until(EC.presence_of_element_located((By.ID, "")))
+            ele_loginname = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID,"username_Li5OT")))
+            ele_loginpwd = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID, "password3_Li5OT")))
+            ele_login = WebDriverWait(driver, 10, 1).until(EC.presence_of_element_located((By.NAME, "loginsubmit")))
             ele_loginname.send_keys(name)
             ele_loginpwd.send_keys(pwd)
             sleep(3)
@@ -39,9 +39,9 @@ class model():
     #搜索
     def search(driver,key):
         try:
-            ele_search_input = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID,"")))
+            ele_search_input = WebDriverWait(driver,10,1).until(EC.presence_of_element_located((By.ID,"scbar_txt")))
             ele_search_input.send_key(key)
-            ele_search = WebDriverWait(driver, 10, 1).until(EC.presence_of_element_located((By.ID, "")))
+            ele_search = WebDriverWait(driver, 10, 1).until(EC.presence_of_element_located((By.XPATH, "//*[@id='scbar_form']/div/div[2]/img")))
             ele_search.click()
         except TimeoutException as e:
             print("search failled !!!")

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object value="123">
+    <首页>
+    <登录按钮> <type>xpath</type> <value>//span[text()='登录']</value> </登录按钮>
+    </首页>
+</object>

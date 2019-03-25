@@ -47,6 +47,7 @@ class model():
             print("search failled !!!")
             print(e)
 
+
      #校验
     def reasult_assert(driver,expected,actual):
         try:
